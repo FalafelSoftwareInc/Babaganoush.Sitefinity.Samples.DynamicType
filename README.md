@@ -1,4 +1,4 @@
-Babaganoush.Sitefinity.Samples.DynamicType
-==========================================
+Babaganoush for Sitefinity: Dynamic Content Sample
+==================================================
 
-Babaganoush Sitefinity sample for dynamic type.
+Babaganoush Sample for Dynamic Content types. See tutorial for more information: http://babaganoush.falafel.com/documentation/tutorials/working-with-dynamic-types

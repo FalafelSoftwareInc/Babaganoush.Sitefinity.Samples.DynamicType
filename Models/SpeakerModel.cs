@@ -48,35 +48,16 @@ namespace Babaganoush.Sitefinity.Samples.DynamicType.Models
             if (sfContent != null)
             {
                 //SET CUSTOM PROPERTIES
-                if (sfContent.DoesFieldExist("Email"))
-                    Email = sfContent.GetValue<Lstring>("Email").Value;
-
-                if (sfContent.DoesFieldExist("Bio"))
-                    Bio = sfContent.GetValue<Lstring>("Bio").Value;
-
-                if (sfContent.DoesFieldExist("FirstName"))
-                    FirstName = sfContent.GetValue<Lstring>("FirstName").Value;
-
-                if (sfContent.DoesFieldExist("LastName"))
-                    LastName = sfContent.GetValue<Lstring>("LastName").Value;
-
-                if (sfContent.DoesFieldExist("Company"))
-                    Company = sfContent.GetValue<Lstring>("Company").Value;
-
-                if (sfContent.DoesFieldExist("Position"))
-                    Position = sfContent.GetValue<Lstring>("Position").Value;
-
-                if (sfContent.DoesFieldExist("Twitter"))
-                    Twitter = sfContent.GetValue<Lstring>("Twitter").Value;
-
-                if (sfContent.DoesFieldExist("Website"))
-                    Website = sfContent.GetValue<Lstring>("Website").Value;
-
-                if (sfContent.DoesFieldExist("Photo"))
-                    Photo = sfContent.GetImage("Photo");
-
+                Email = sfContent.GetStringSafe("Email");
+                Bio = sfContent.GetStringSafe("Bio");
+                FirstName = sfContent.GetStringSafe("FirstName");
+                LastName = sfContent.GetStringSafe("LastName");
+                Company = sfContent.GetStringSafe("Company");
+                Position = sfContent.GetStringSafe("Position");
+                Twitter = sfContent.GetStringSafe("Twitter");
+                Website = sfContent.GetStringSafe("Website");
+                Photo = sfContent.GetImage("Photo");
                 Categories = sfContent.GetTaxa("Category");
-
                 Tags = sfContent.GetTaxa("Tags");
             }
         }

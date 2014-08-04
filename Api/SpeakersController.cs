@@ -14,5 +14,17 @@ namespace Babaganoush.Sitefinity.Samples.DynamicType.Api
         {
 
         }
+
+        /// <summary>
+        /// Query if this user is authenticated. This will apply across all web services.
+        /// </summary>
+        ///
+        /// <returns>
+        /// true if authenticated, false if not.
+        /// </returns>
+        //public override bool IsAuthenticated()
+        //{
+        //    return SecurityManager.IsBackendUser();
+        //}
     }
 }
